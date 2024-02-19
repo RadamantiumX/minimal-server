@@ -21,7 +21,7 @@ router.post('/messages', async (req, res) => {
         const message = await prisma.message.create({
             data: req.body
         })
-        res.json(message)
+        res.json({ message: 'Message saved' })
     } catch (err) {
         next(err)
     }

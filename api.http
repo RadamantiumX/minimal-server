@@ -1,0 +1,9 @@
+### Create message
+POST http://localhost:3000/api/messages
+Content-Type: application/json
+
+{
+    "name": "Jon Doe",
+    "email": "eduardo@gmail.com",
+    "message": "Die ist ein lust ist"
+}
