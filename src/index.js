@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(express.json());
 app.use(corsMiddleware());
+app.use("/", (req, res) => {
+    res.status(200).send({ message: "Hello There" })
+})
 app.use('/api', messageRoutes)
 
 app.listen(PORT)
