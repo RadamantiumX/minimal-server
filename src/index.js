@@ -12,7 +12,7 @@ app.use(corsMiddleware());
 /*app.use("/", (req, res) => {
     res.status(200).send({ message: "Hello There" })
 })*/
-app.use('/api', messageRoutes)
+app.use('/', messageRoutes)
 
 app.listen(PORT)
 console.log('Server listening on port', PORT)
