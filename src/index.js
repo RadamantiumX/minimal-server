@@ -1,12 +1,12 @@
 import express from 'express';
 import messageRoutes from './routes/messages.routes.js'
 import { corsMiddleware } from './middlewares/cors.js'
-// import bodyParser from 'body-parser'
+import bodyParser from 'body-parser'
 
 const app = express();
 const PORT = process.env.PORT || 3000
-/*app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())*/
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 app.use(express.json());
 app.use(corsMiddleware());
 /*app.use("/", (req, res) => {
