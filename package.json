@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "postinstall": "prisma generate",
-    "start": "node --watch src/index.js",
+    "build": "prisma generate && rm -rf ./build",
+    "start": "node --watch build/src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
