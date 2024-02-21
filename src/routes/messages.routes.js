@@ -21,6 +21,10 @@ router.post('/messages', async (req, res) => {
         const message = await prisma.message.create({
             data: req.body
         })
+        res.set({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        });
         res.json({ message: 'Message saved' })
     } catch (err) {
         next(err)
