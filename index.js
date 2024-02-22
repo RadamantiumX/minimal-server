@@ -16,3 +16,5 @@ app.use('/api', messageRoutes)
 
 app.listen(PORT)
 console.log('Server listening on port', PORT)
+
+export default app
