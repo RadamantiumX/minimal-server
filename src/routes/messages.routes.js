@@ -10,7 +10,8 @@ router.get('/messages', async (req, res) => {
                 id: true
             }
         })
-        res.json({messages : messages})
+        console.log(res.json(messages));
+        // res.json({messages : messages})
     } catch (err) {
         next(err)
     }
