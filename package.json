@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "prisma generate && rm -rf ./build",
+    "build": "prisma generate",
     "start": "node --watch build/src/index.js",
     "dev": "nodemon src/index.js"
   },
