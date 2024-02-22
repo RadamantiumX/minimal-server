@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "prisma generate",
-    "start": "node --watch build/src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node --watch index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
