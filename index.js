@@ -1,6 +1,6 @@
 import express from 'express';
-import messageRoutes from './routes/messages.routes.js'
-import { corsMiddleware } from './middlewares/cors.js'
+import messageRoutes from './src/routes/messages.routes.js'
+import { corsMiddleware } from './src/middlewares/cors.js'
 
 
 
