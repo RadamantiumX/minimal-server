@@ -5,11 +5,7 @@ const router = Router()
 
 router.get('/messages', async (req, res) => {
     try {
-        const messages = await prisma.message.findMany({
-            include: {
-                id: true
-            }
-        })
+        const messages = await prisma.message.findMany()
         console.log(messages);
         // res.json({messages : messages})
     } catch (err) {
