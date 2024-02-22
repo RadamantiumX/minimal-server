@@ -3,7 +3,7 @@ import messageRoutes from './routes/messages.routes.js'
 import { corsMiddleware } from './middlewares/cors.js'
 
 
-const app = express();
+export const app = express();
 const PORT = process.env.PORT || 3000
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
