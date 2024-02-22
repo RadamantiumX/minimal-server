@@ -1,9 +1,12 @@
 ### Create message
-POST https://minimal-server-six.vercel.app/api/messages
+POST http://localhost:5432/api/messages
 Content-Type: application/json
 
 {
     "name": "Meriadox",
     "email": "merrino@gmail.com",
-    "message": "lust od death rising",
+    "message": "lust od death rising"
 }
+
+### Get messages
+GET http://localhost:5432/api/messages
