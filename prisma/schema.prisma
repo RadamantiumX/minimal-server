@@ -16,3 +16,12 @@ model Message {
   email String
   message String
 }
+
+model Epikka {
+  id Int @id @default(autoincrement())
+  nombre String
+  email String
+  telefono String
+  mensaje String
+
+}

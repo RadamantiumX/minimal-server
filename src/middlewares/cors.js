@@ -9,6 +9,7 @@ const ACCEPTED_ORIGINS = [
     'http://localhost:3004',
     'http://localhost:3005',
     'http://localhost:4000',
+    'http://localhost:5173'
     
 
 ]
