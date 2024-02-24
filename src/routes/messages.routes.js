@@ -9,7 +9,7 @@ router.get('/messages', async (req, res) => {
        
         res.json(messages)
     } catch (err) {
-        next(err)
+        res.status(400).json(err)
     }
 })
 
@@ -18,13 +18,13 @@ router.post('/messages', async (req, res) => {
         const message = await prisma.message.create({
             data: req.body
         })
-        res.set({
+       res.set({
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
         res.json({ message: 'Message saved' })
     } catch (err) {
-        next(err)
+        res.status(400).json(err)
     }
 })
 
