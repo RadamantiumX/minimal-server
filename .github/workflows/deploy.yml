@@ -1,0 +1,22 @@
+name: Deploy on Donweb
+on:
+    push: 
+        branches:
+            - main
+
+jobs:
+    deploy:
+      name: Deploy server on Donweb
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Get latest version
+          uses: actions/checkout@v3
+
+        - name: Sync Production Config
+          uses: easingthemes/ssh-deploy@v4.0.5
+          env:
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+            REMOTE_USER: ${{ secrets.REMOTE_USER }}
+            REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
