@@ -1,6 +1,6 @@
 import express from 'express';
 import messageRoutes from './src/routes/messages.routes.js'
-import epikkaRoutes from './src/routes/epikka.routes.js'
+// import epikkaRoutes from './src/routes/epikka.routes.js'
 import { corsMiddleware } from './src/middlewares/cors.js'
 import bodyParser from 'body-parser'
 
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 //////////////////////
 
 app.use('/api', messageRoutes)
-app.use('/api', epikkaRoutes) 
+// app.use('/api', epikkaRoutes) 
 
 
 app.listen(PORT)
