@@ -24,4 +24,3 @@ app.use('/api', epikkaRoutes)
 app.listen(PORT)
 console.log(`Server started on http://localhost:${PORT}`)
 
-export default app
