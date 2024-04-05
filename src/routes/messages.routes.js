@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/messages', async (req, res) => {
     try {
-        const messages = await prisma.message.findMany()
+        const messages = await prisma.form.findMany()
        
         res.json(messages)
     } catch (err) {
@@ -15,7 +15,7 @@ router.get('/messages', async (req, res) => {
 
 router.post('/messages', async (req, res) => {
     try {
-        const message = await prisma.message.create({
+        const message = await prisma.form.create({
             data: req.body
         })
        res.set({

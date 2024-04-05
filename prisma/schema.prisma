@@ -10,18 +10,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Message {
-  id Int @id @default(autoincrement())
-  name String
-  email String
-  message String
-}
+// //model Message {
+//   id Int @id @default(autoincrement())
+//   name String
+//   email String
+//   message String
+// }
 
-model Epikka {
-  id Int @id @default(autoincrement())
-  nombre String
-  email String
-  telefono String
-  mensaje String
+// model Epikka {
+//   id Int @id @default(autoincrement())
+//   nombre String
+//   email String
+//   telefono String
+//   mensaje String
 
-}
+// }
+
+model Form{
+    id Int @id @default(autoincrement())
+    nombre String
+    apellido String
+    email String
+    profesion String
+    empresa String
+    pais String
+  }
