@@ -5,7 +5,7 @@ on:
             - main
 
 jobs:
-    deploy:
+  deploy:
       name: Deploy server on Donweb
       runs-on: ubuntu-latest
 
