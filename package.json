@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "postinstall": "prisma generate",
-    "start": "node --watch index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
