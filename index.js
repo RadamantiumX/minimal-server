@@ -12,7 +12,7 @@ app.use(corsMiddleware);
 
 // Muy importante: NO UTILIZAR MEOTODO "use()" EN RUTA RAIZ
 app.get("/", (req, res) => {
-    res.status(200).send({ message: "Hello There" })
+    res.status(200).json({ message: "Hello There" })
 })
 //////////////////////
 
