@@ -3,7 +3,7 @@
 # For more information see: 
 # https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: NodeJS server 
 
 on:
   push:
@@ -22,5 +22,5 @@ jobs:
         node-version: 18.x
     - run: npm i
     - run: npm run build --if-present
-    - run: npm run start
     - run: npm run postinstall
+    - run: pm2 restart minimal-server
