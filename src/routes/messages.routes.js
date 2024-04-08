@@ -6,7 +6,7 @@ const router = Router()
 router.get('/messages', async (req, res) => {
 
     try {
-        res.status(200).send({ message: "Hello There" })
+        
         const messages = await prisma.form.findMany()
        
         res.json(messages)
