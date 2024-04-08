@@ -1,5 +1,6 @@
 import express, {json} from 'express';
 import messageRoutes from './src/routes/messages.routes.js'
+import epikkaRoutes from './src/routes/epikka.routes.js'
 import cors from 'cors'
 import { corsOptions } from './src/middlewares/cors.js';
 import bodyParser from 'body-parser'
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 //////////////////////
 
 app.use('/api', messageRoutes)
+app.use('/api', epikkaRoutes)
  
 
 
