@@ -1,9 +1,9 @@
 import {  Router } from 'express';
 import { prisma } from '../db.js'; 
 
-const router = Router()
+const messageRouter = Router()
 
-router.get('/messages', async (req, res) => {
+messageRouter.get('/messages', async (req, res) => {
 
     try {
         
@@ -15,7 +15,7 @@ router.get('/messages', async (req, res) => {
     }
 })
 
-router.post('/messages', async (req, res) => {
+messageRouter.post('/messages', async (req, res) => {
     try {
         const message = await prisma.form.create({
             data: req.body
@@ -30,4 +30,4 @@ router.post('/messages', async (req, res) => {
     }
 })
 
-export default router
+export default messageRouter

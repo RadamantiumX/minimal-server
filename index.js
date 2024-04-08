@@ -1,6 +1,6 @@
 import express, {json} from 'express';
-import messageRoutes from './src/routes/messages.routes.js'
-import epikkaRoutes from './src/routes/epikka.routes.js'
+import messageRouter from './src/routes/messages.routes.js'
+import epikkaRouter from './src/routes/epikka.routes.js'
 import cors from 'cors'
 import { corsOptions } from './src/middlewares/cors.js';
 import bodyParser from 'body-parser'
@@ -18,11 +18,9 @@ app.get("/", (req, res) => {
 })
 //////////////////////
 
-app.use('/api', messageRoutes)
-app.use('/api', epikkaRoutes)
+app.use('/api', messageRouter)
+app.use('/api', epikkaRouter)
  
-
-
 app.listen(PORT)
 console.log(`Server started on http://localhost:${PORT}`)
 

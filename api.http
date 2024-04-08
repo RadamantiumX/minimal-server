@@ -28,3 +28,14 @@ Content-Type: application/json
     "empresa": "empresa",
     "pais": "pais"
 }
+
+### Post in to Epikka DB
+POST http://localhost:4000/api/epikka
+Content-Type: application/json
+
+{ 
+    "nombre": "nombre",
+    "email": "user@example.com",
+    "telefono": "0303456",
+    "mensaje": "Es un test de mensajes, no tomar en cuenta."
+}

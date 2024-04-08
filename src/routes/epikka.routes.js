@@ -1,9 +1,9 @@
 import {  Router } from 'express';
 import { prisma } from '../db.js'; 
 
-const router = Router()
+const epikkaRouter = Router()
 
-router.get('/epikka', async (req, res) => {
+epikkaRouter.get('/epikka', async (req, res) => {
     try {
         const messages = await prisma.epikka.findMany()
        
@@ -13,7 +13,7 @@ router.get('/epikka', async (req, res) => {
     }
 })
 
-router.post('/epikka', async (req, res) => {
+epikkaRouter.post('/epikka', async (req, res) => {
     try {
         const message = await prisma.epikka.create({
             data: req.body
@@ -28,4 +28,4 @@ router.post('/epikka', async (req, res) => {
     }
 })
 
-export default router
+export default epikkaRouter

@@ -17,14 +17,13 @@ datasource db {
 //   message String
 // }
 
-// model Epikka {
-//   id Int @id @default(autoincrement())
-//   nombre String
-//   email String
-//   telefono String
-//   mensaje String
-
-// }
+ model Epikka {
+   id Int @id @default(autoincrement())
+   nombre String
+   email String
+   telefono String
+   mensaje String
+ }
 
 model Form{
     id Int @id @default(autoincrement())
