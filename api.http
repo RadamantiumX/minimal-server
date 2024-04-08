@@ -14,3 +14,17 @@ GET https://minimal-server-six.vercel.app/api/messages
 
 ### Init Root
 GET https://minimal-server-six.vercel.app/
+
+
+### Post in to VPS
+POST http://customer-eg.online/api/messages
+Content-Type: application/json
+
+{ 
+    "nombre": "nombre",
+    "apellido": "apellido",
+    "email": "user@example.com",
+    "profesion": "profesion",
+    "empresa": "empresa",
+    "pais": "pais"
+}

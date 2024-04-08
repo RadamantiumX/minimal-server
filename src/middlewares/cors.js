@@ -1,4 +1,4 @@
-import cors from 'cors'
+
 
 const ACCEPTED_ORIGINS = [
     'http://localhost:3000',
@@ -13,14 +13,13 @@ const ACCEPTED_ORIGINS = [
    
 ]
 
-export const corsMiddleware = ({  acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
-    origin: (origin, callback) => {
-        if (acceptedOrigins.includes(origin)){
-            return callback(null, true)
+export const corsOptions = {
+    origin: function(origin, callback) {
+        if(ACCEPTED_ORIGINS.indexOf(origin)){
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'))
         }
-
-        if (!origin) return callback(null, true)
-
-        return callback(new Error('Not allowed by CORS'))
     }
-})
+}
+
