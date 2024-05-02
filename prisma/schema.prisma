@@ -34,3 +34,14 @@ model Form{
     empresa String
     pais String
   }
+
+ model Informes{
+     id Int @id @default(autoincrement())
+     latitud String
+     longitud String
+     label_1 String
+     conf_1 String
+     label_2 String
+     conf_2 String
+     created_at DateTime @default(now())
+ } 

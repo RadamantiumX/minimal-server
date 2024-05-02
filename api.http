@@ -39,3 +39,17 @@ Content-Type: application/json
     "telefono": "0303456",
     "mensaje": "Es un test de mensajes, no tomar en cuenta."
 }
+
+
+### Post informes
+POST http://localhost:4000/api/informes
+Content-Type: application/json
+
+{ 
+    "latitud": "-34.55217",
+    "longitud": "-58.69784",
+    "label_1": "label_1",
+    "conf_1": "conf_1",
+    "label_2": "label_2",
+    "conf_2": "conf_2"
+}
