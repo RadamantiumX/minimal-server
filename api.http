@@ -53,3 +53,7 @@ Content-Type: application/json
     "label_2": "label_2",
     "conf_2": "conf_2"
 }
+
+
+### Get informes
+GET http://localhost:4000/api/informes

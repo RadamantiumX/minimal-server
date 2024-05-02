@@ -18,4 +18,15 @@ informesRouter.post('/informes', async (req, res) => {
     }
 })
 
+informesRouter.get('/informes', async(req, res) => {
+    try {
+        
+        const messages = await prisma.informes.findMany()
+       
+        res.json(messages)
+    } catch (err) {
+        res.status(400).json(err)
+    }
+})
+
 export default informesRouter
