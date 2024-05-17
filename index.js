@@ -2,6 +2,7 @@ import express, {json} from 'express';
 import messageRouter from './src/routes/messages.routes.js'
 import epikkaRouter from './src/routes/epikka.routes.js'
 import informesRouter from './src/routes/informes.routes.js'
+import pornhubRouter from './src/routes/pornhub.routes.js';
 import cors from 'cors'
 import { corsOptions } from './src/middlewares/cors.js';
 import bodyParser from 'body-parser'
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 app.use('/api', messageRouter)
 app.use('/api', epikkaRouter)
 app.use('/api', informesRouter)
+app.use('/api', pornhubRouter)
  
 app.listen(PORT)
 console.log(`Server started on http://localhost:${PORT}`)
