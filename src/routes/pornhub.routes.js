@@ -6,7 +6,7 @@ const pornhubRouter = Router()
 
 pornhubRouter.get('/models', async (req, res) => {
 
-   
+   try{
         const pornhub = new PornHub()
         const models = await pornhub.pornstarList({
             page: 1,
@@ -15,6 +15,9 @@ pornhubRouter.get('/models', async (req, res) => {
         })
 
         res.status(200).json({ models: models })
+    } catch (err) {
+        res.status(400).json(err)
+    }
     
 })
 
