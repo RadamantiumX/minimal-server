@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 app.use('/api', messageRouter)
 app.use('/api', epikkaRouter)
 app.use('/api', informesRouter)
-app.use('/api', pornhubRouter)
+app.use('/phub', pornhubRouter)
  
 app.listen(PORT)
 console.log(`Server started on http://localhost:${PORT}`)
