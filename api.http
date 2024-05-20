@@ -56,4 +56,4 @@ Content-Type: application/json
 
 
 ### Get models
-GET http://localhost:4000/api/models
+GET http://localhost:4000/api/data
